@@ -15,4 +15,4 @@ RUN apt-get update && \
       /usr/lib/php5/build \
       /var/lib/apt/lists/*
 
-EXPOSE 3001 3050
+EXPOSE 3000 3001
