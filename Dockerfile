@@ -1,8 +1,6 @@
 FROM node:6.14
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
-USER node
-
 RUN apt-get update && \
     apt-get install -y php5-dev apt-transport-https && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
@@ -18,5 +16,3 @@ RUN apt-get update && \
       /var/lib/apt/lists/*
 
 EXPOSE 3000 3001
-
-CMD [ "node" ]
