@@ -4,7 +4,6 @@ MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 USER node
 
 RUN apt-get update && \
-    adduser -u 1000 -G node -s /bin/sh -D node && \
     apt-get install -y php5-dev apt-transport-https && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
