@@ -1,11 +1,10 @@
 FROM node:6.14
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
-RUN adduser -D -H -u 1000 -s /bin/bash www-data
-
 USER www-data
 
 RUN apt-get update && \
+    adduser -D -H -u 1000 -s /bin/bash www-data && \
     apt-get install -y php5-dev apt-transport-https && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
