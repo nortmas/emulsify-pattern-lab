@@ -16,3 +16,5 @@ RUN apt-get update && \
       /var/lib/apt/lists/*
 
 EXPOSE 3000 3001
+
+CMD ["su", "-", "node", "-c", "node"]
