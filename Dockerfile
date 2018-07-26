@@ -17,4 +17,6 @@ RUN apt-get update && \
 
 EXPOSE 3000 3001
 
-CMD ["su", "-", "node", "-c", "node"]
+USER node
+
+CMD ["node"]
