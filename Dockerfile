@@ -1,7 +1,12 @@
 FROM node:13.10.1
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
-RUN apt-get update && \
+RUN echo "deb http://security.debian.org/ jessie/updates main" | tee /etc/apt/sources.list && \
+    echo "deb-src http://security.debian.org/ jessie/updates main" | tee /etc/apt/sources.list && \
+    echo "deb http://security.debian.org/ jessie/updates main contrib non-free" | tee /etc/apt/sources.list && \
+    echo "deb-src http://security.debian.org/ jessie/updates main contrib non-free" | tee /etc/apt/sources.list && \
+    echo "deb http://http.us.debian.org/debian jessie main contrib non-free" | tee /etc/apt/sources.list && \
+    apt-get update && \
     apt-get install -y php5-dev apt-transport-https && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
