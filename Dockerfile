@@ -1,4 +1,4 @@
-FROM node:6.14
+FROM node:13.10.1
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
 RUN apt-get update && \
