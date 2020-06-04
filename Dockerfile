@@ -1,5 +1,4 @@
-# syntax=docker/dockerfile:experimental
-FROM node:12.18.0
+FROM node:13.10.1
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
 RUN echo "deb http://security.debian.org/ jessie/updates main" | tee /etc/apt/sources.list && \
