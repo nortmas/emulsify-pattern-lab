@@ -1,4 +1,4 @@
-FROM node:14.4.0
+FROM node:12.18.0
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
 RUN echo "deb http://security.debian.org/ jessie/updates main" | tee /etc/apt/sources.list && \
