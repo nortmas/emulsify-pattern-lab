@@ -1,4 +1,4 @@
-FROM node:10.21.0
+FROM node:12.22.12
 MAINTAINER Dmitry Antonenko <raerayan@gmail.com>
 
 RUN echo "deb http://security.debian.org/ jessie/updates main" | tee /etc/apt/sources.list && \
